@@ -2,7 +2,7 @@
 
 def check_index(text, search_string)
   text_number = text.index(search_string)
-  if text_number != nil
+  if text_number
     puts "特定の文字#{search_string}の位置は、#{text_number}番目です"
   else
     puts "特定の文字#{search_string}はありません"
