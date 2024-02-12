@@ -1,16 +1,14 @@
-# 配列ないの要素の数値を、大きい順に並び替えて出力する
+# 対象の文字列の中に特定の文字がある場合に、その文字の位置を検知するプログラム
 
-def bubble_sort(data)
-  length = data.length 
-  for i in 0..(length-1) 
-    for j in 1.. (length-i-1) 
-      if data[j-1] < data[j] 
-        data[j-1],data[j] = data[j],data[j-1] 
-      end
-    end
+def check_index(text, search_string)
+  text_number = text.index(search_string)
+  if text_number != nil
+    puts "特定の文字#{search_string}の位置は、#{text_number}番目です"
+  else
+    puts "特定の文字#{search_string}はありません"
   end
 end
 
-numbers = [1,23,100,3,65,45,8,44,76]
-bubble_sort(numbers)
-puts numbers
+check_index("hello", "h")
+check_index("world", "e")
+check_index("apple","p")
