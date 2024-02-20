@@ -1,6 +1,5 @@
 def text_transform(text)
-  text = text.gsub(/[\s　]/, "")
-  puts text.upcase
+  puts text.gsub(/[\s　]/, "").upcase
 end
 
 # 呼び出し例
